@@ -1,0 +1,35 @@
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab{
+    /* border:1px solid #aaa; */
+    width:1300px;
+    
+}
+
+.head th{
+    vertical-align:baseline;
+    padding:5px 15px 5px 6px;
+    background-color:cadetblue;
+    /* border:1px solid #3F3F3F; */
+    text-align:center;
+    color:#fff;
+}
+
+
+.body tr{
+    border:1px solid #aaa;
+}
+
+.body td{
+    vertical-align:baseline;
+    padding:5px 15px 5px 6px;
+    background-color:#ebebeb;
+    /* border:1px solid #e0e0e0; */
+    text-align:center;
+    color:#161616;
+}

@@ -1,0 +1,60 @@
+.main{
+    height:100%;
+	margin:0;
+}
+
+.form{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    left: 800px;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: cadetblue;
+    border-radius: 20px;
+}
+
+.name input{
+    width: 350px;
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 25px;
+    background-color: #fffff0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.psw input{
+    width: 350px;
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 25px;
+    background-color: #fffff0;
+    border-radius: 10px;
+}
+
+.btn{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.sign{
+    text-decoration: none;
+    color: rgb(1, 112, 116);
+    font-size: 20px;
+}
