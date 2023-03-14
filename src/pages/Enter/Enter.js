@@ -53,6 +53,11 @@ const Enter = () => {
     }
     return (
         <div className={classes.main}>
+            <div className={classes.img}>
+                <div className={classes.font}>
+                    旧物回收利用平台
+                </div>
+            </div>
             <form onSubmit={submitHandler} className={classes.form}>
                 <div className={classes.name}>
                     <input ref={numberInf} type="text" placeholder={"账号"}/>

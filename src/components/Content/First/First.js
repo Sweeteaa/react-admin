@@ -1,13 +1,10 @@
 import React from 'react';
-import Earth from '../Charts/Earth';
-import Tab from '../Charts/Tab';
+import classes from './First.module.css'
 
 const First = () => {
     return (
         <div>
             首页
-            <Tab/>
-            {/* <Earth/> */}
         </div>
     );
 };

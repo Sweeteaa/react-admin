@@ -18,7 +18,7 @@ const Tab = () => {
       };
     return (
         <div>
-            <EChartsReact option={option} style={{height:'400px'}}/>
+            <EChartsReact option={option} style={{height:'400px',width:'600px'}}/>
         </div>
     );
 };

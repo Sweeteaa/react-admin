@@ -28,6 +28,11 @@ const Home = () => {
 
     const items = [
         getItem('首页', '/home/first', <LaptopOutlined />),
+        getItem('图表数据', 'sub', <MailOutlined />, [
+            getItem('回收订单图表', '/home/rchart', <LaptopOutlined />),
+            getItem('换购订单图表', '/home/uchart', <NotificationOutlined />),
+            getItem('用户图表', '/home/userchart', <NotificationOutlined />),
+        ]),
         getItem('回收管理', 'sub1', <MailOutlined />, [
             getItem('回收订单管理', '/home/recycle', <LaptopOutlined />),
             getItem('换购订单管理', '/home/change', <NotificationOutlined />),
