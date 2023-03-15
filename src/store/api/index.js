@@ -40,6 +40,24 @@ let http ={
                 console.log(error);
             })
         })
+    },
+
+    getRC: function(url,param){
+        // params = params || {};
+        return new Promise((resolve, reject)=>{
+            axios({
+                method:'get',
+                url:url,
+            })
+            .then((res)=>{
+                // console.log(res.data.data);
+                resolve(res.data.data)
+            })
+            .catch((error)=>{
+                reject(error)
+                console.log(error);
+            })
+        })
     }
 }
 
