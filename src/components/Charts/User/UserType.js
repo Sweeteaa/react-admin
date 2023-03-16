@@ -25,17 +25,15 @@ const UserType = () => {
               borderRadius: 8
             },
             data: [
-              { value: 40, name: 'rose 1' },
-              { value: 38, name: 'rose 2' },
-              { value: 32, name: 'rose 3' },
-              { value: 30, name: 'rose 4' },
+              { value: 30, name: '男' },
+              { value: 58, name: '女' },
             ]
           }
         ]
       };
     return (
         <div>
-            <div>用户换购物品品种偏好</div>
+            <div>用户性别分布</div>
             <EChartsReact option={option} style={{height:'450px',width:'500px'}}/>
         </div>
     );

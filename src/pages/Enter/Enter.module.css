@@ -31,6 +31,16 @@
     letter-spacing: 12px;
 }
 
+.title{
+    position: absolute;
+    top: 350px;
+    right: 440px;
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+
+}
+
 .form{
     width: 400px;
     height: 300px;

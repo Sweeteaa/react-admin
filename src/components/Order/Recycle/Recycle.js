@@ -69,7 +69,7 @@ const Recycle = (e) => {
     const fetchData = useCallback(async () => {
         await axios({
             method:'get',
-            url:'http://localhost:3001/user/order/getOrder',
+            url:'http://localhost:3001/user/order/getAllOrder',
         }).then((res) => {
             // console.log('res', res.data.data);
             getList(res.data.data)

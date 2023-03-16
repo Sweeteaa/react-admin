@@ -1,10 +1,10 @@
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Rchart from '../components/Charts/Recycle/Rchart/Rchart';
 import Uchart from '../components/Charts/Use/Uchart/Uchart';
 import Userchart from '../components/Charts/User/Userchart/Userchart';
-import Contents from '../components/Content/Content';
 import First from '../components/Content/First/First';
+import Audit from '../components/Order/Audit/Audit';
 import Change from '../components/Order/Change/Change';
 import Recycle from '../components/Order/Recycle/Recycle';
 import Resource from '../components/Resource/Resource';
@@ -21,6 +21,7 @@ const router = () => {
                 <Route path={"rchart"} element={<Rchart/>}/>
                 <Route path={"uchart"} element={<Uchart/>}/>
                 <Route path={"userchart"} element={<Userchart/>}/>
+                <Route path={"audit"} element={<Audit/>}/>
                 <Route path={"recycle"} element={<Recycle/>}/>
                 <Route path={"change"} element={<Change/>}/>
                 <Route path={"resource"} element={<Resource/>}/>

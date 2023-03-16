@@ -32,7 +32,7 @@ const Change = () => {
         return new Promise((resolve,reject) => {
             axios({
                   method:'post',
-                  url:`http://127.0.0.1:3001/user/items/updateOrderState/${selectid}`,
+                  url:`http://127.0.0.1:3001/user/items/updateUseOrderState/${selectid}`,
                   data:State,
                   headers:{'Content-Type':'application/x-www-form-urlencoded'}
               })

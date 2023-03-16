@@ -2,64 +2,64 @@ import React from 'react';
 import EChartsReact from 'echarts-for-react';
 
 const UYear = () => {
-    let option = {
-        tooltip: {
-          trigger: 'axis'
-        },
-        legend: {
-          data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
-        },
-        grid: {
-          left: '3%',
-          right: '4%',
-          containLabel: true
-        },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
-        xAxis: {
-          type: 'category',
-          boundaryGap: false,
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        yAxis: {
-          type: 'value'
-        },
-        series: [
-          {
-            name: 'Email',
-            type: 'line',
-            stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210]
-          },
-          {
-            name: 'Union Ads',
-            type: 'line',
-            stack: 'Total',
-            data: [220, 182, 191, 234, 290, 330, 310]
-          },
-          {
-            name: 'Video Ads',
-            type: 'line',
-            stack: 'Total',
-            data: [150, 232, 201, 154, 190, 330, 410]
-          },
-          {
-            name: 'Direct',
-            type: 'line',
-            stack: 'Total',
-            data: [320, 332, 301, 334, 390, 330, 320]
-          },
-          {
-            name: 'Search Engine',
-            type: 'line',
-            stack: 'Total',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
-          }
-        ]
-    };
+  let option = {
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['全部换购商品种类', '食物', '装饰', '配饰','日用品']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        name: '全部换购商品种类',
+        type: 'line',
+        stack: 'Total',
+        data: [12, 13, 10, 13, 9, 23, 21]
+      },
+      {
+        name: '食物',
+        type: 'line',
+        stack: 'Total',
+        data: [32, 33, 22, 18, 21, 33, 32]
+      },
+      {
+        name: '装饰',
+        type: 'line',
+        stack: 'Total',
+        data: [15, 23, 20, 15, 19, 33, 41]
+      },
+      {
+        name: '配饰',
+        type: 'line',
+        stack: 'Total',
+        data: [ 19, 23, 22, 18, 29, 33, 31]
+      },
+      {
+        name: '日用品',
+        type: 'line',
+        stack: 'Total',
+        data: [82, 129, 133, 132, 93, 90, 93]
+      }
+    ]
+};
       
     return (
         <div>

@@ -1,13 +1,10 @@
-import { Layout, theme, Menu } from 'antd';
-import React,{useState} from 'react';
+import { Layout, Menu } from 'antd';
+import React from 'react';
 import Contents from '../../components/Content/Content';
-import { Outlet, useNavigate,Route,Routes } from 'react-router-dom';
-import Headers from '../../components/Header/Header';
-import Menus from '../../components/Menus/Menus';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import classes from './Home.module.css'
 import { LaptopOutlined, NotificationOutlined, MailOutlined } from '@ant-design/icons';
-import { MenuItem,SubMenu } from 'rc-menu';
 import {DeleteOutlined,CaretDownOutlined} from '@ant-design/icons'
 import { useSelector } from 'react-redux';
 import {store} from '../../store/index'
@@ -34,10 +31,11 @@ const Home = () => {
             getItem('用户图表', '/home/userchart', <NotificationOutlined />),
         ]),
         getItem('回收管理', 'sub1', <MailOutlined />, [
+            getItem('订单审核管理', '/home/audit', <LaptopOutlined />),
             getItem('回收订单管理', '/home/recycle', <LaptopOutlined />),
             getItem('换购订单管理', '/home/change', <NotificationOutlined />),
         ]),
-        getItem('资源管理', '/home/resource', <LaptopOutlined />),
+        getItem('活动管理', '/home/resource', <LaptopOutlined />),
     ];
 
     

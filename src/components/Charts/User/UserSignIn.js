@@ -5,7 +5,7 @@ const UserSignIn = () => {
     let option = {
         xAxis: {
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
         },
         yAxis: {
           type: 'value'

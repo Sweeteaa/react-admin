@@ -7,6 +7,7 @@ import Resource from '../Resource/Resource';
 import Rchart from '../Charts/Recycle/Rchart/Rchart';
 import Uchart from '../Charts/Use/Uchart/Uchart';
 import Userchart from '../Charts/User/Userchart/Userchart';
+import Audit from '../Order/Audit/Audit';
 
 const Contents = () => {
     return (
@@ -21,6 +22,7 @@ const Contents = () => {
                 <Route exact path="rchart" element={<Rchart/>}/>
                 <Route exact path="uchart" element={<Uchart/>}/>
                 <Route exact path="userchart" element={<Userchart/>}/>
+                <Route exact path="audit" element={<Audit />} />
                 <Route exact path="recycle" element={<Recycle />} />
                 <Route exact path="change" element={<Change />} />
                 <Route exact path="resource" element={<Resource />} />

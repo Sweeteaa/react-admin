@@ -28,30 +28,30 @@ const Type = () => {
     }).then((res) => {
         // console.log('res', res.data.data);
         getRBD(res.data.data[0])
+      });
+  },[])
+
+  //获取家具种类订单数
+  const RFurData = useCallback(async () => {
+    await axios({
+        method:'get',
+        url:`http://127.0.0.1:3001/chart/recyclecate/${'家具'}`,
+    }).then((res) => {
+        // console.log('res', res.data.data);
+        getRFD(res.data.data[0])
     });
-},[])
+  },[])
 
-//获取家具种类订单数
-const RFurData = useCallback(async () => {
-  await axios({
-      method:'get',
-      url:`http://127.0.0.1:3001/chart/recyclecate/${'家具'}`,
-  }).then((res) => {
-      // console.log('res', res.data.data);
-      getRFD(res.data.data[0])
-  });
-},[])
-
-//获取日用品种类订单数
-const RDayData = useCallback(async () => {
-  await axios({
-      method:'get',
-      url:`http://127.0.0.1:3001/chart/recyclecate/${'日用品'}`,
-  }).then((res) => {
-      // console.log('res', res.data.data);
-      getRDD(res.data.data[0])
-  });
-},[])
+  //获取日用品种类订单数
+  const RDayData = useCallback(async () => {
+    await axios({
+        method:'get',
+        url:`http://127.0.0.1:3001/chart/recyclecate/${'日用品'}`,
+    }).then((res) => {
+        // console.log('res', res.data.data);
+        getRDD(res.data.data[0])
+    });
+  },[])
 
   useEffect(() => {
     RClothData()

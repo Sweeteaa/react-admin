@@ -58,6 +58,7 @@ const Enter = () => {
                     旧物回收利用平台
                 </div>
             </div>
+            <div className={classes.title}>后台管理系统</div>
             <form onSubmit={submitHandler} className={classes.form}>
                 <div className={classes.name}>
                     <input ref={numberInf} type="text" placeholder={"账号"}/>

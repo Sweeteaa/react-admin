@@ -7,7 +7,7 @@ const Year = () => {
           trigger: 'axis'
         },
         legend: {
-          data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+          data: ['全部回收种类', '衣物', '书籍', '家具','日用品']
         },
         grid: {
           left: '3%',
@@ -22,41 +22,41 @@ const Year = () => {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
         },
         yAxis: {
           type: 'value'
         },
         series: [
           {
-            name: 'Email',
+            name: '全部换购商品种类',
             type: 'line',
             stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210]
+            data: [32, 33, 22, 18, 21, 33, 32]
           },
           {
-            name: 'Union Ads',
+            name: '食物',
             type: 'line',
             stack: 'Total',
-            data: [220, 182, 191, 234, 290, 330, 310]
+            data: [12, 13, 10, 13, 9, 23, 21]
           },
           {
-            name: 'Video Ads',
+            name: '装饰',
             type: 'line',
             stack: 'Total',
-            data: [150, 232, 201, 154, 190, 330, 410]
+            data: [ 19, 23, 22, 18, 29, 33, 31]
           },
           {
-            name: 'Direct',
+            name: '配饰',
             type: 'line',
             stack: 'Total',
-            data: [320, 332, 301, 334, 390, 330, 320]
+            data: [15, 23, 20, 15, 19, 33, 41]
           },
           {
-            name: 'Search Engine',
+            name: '日用品',
             type: 'line',
             stack: 'Total',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
+            data: [82, 129, 133, 132, 93, 90, 93]
           }
         ]
     };
