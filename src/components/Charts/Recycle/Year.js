@@ -7,7 +7,7 @@ const Year = () => {
           trigger: 'axis'
         },
         legend: {
-          data: ['全部回收种类', '衣物', '书籍', '家具','日用品']
+          data: [ '全部回收种类','衣物', '书籍', '家具','日用品']
         },
         grid: {
           left: '3%',
@@ -29,35 +29,30 @@ const Year = () => {
         },
         series: [
           {
-            name: '全部换购商品种类',
+            name: '全部回收种类',
             type: 'line',
-            stack: 'Total',
-            data: [32, 33, 22, 18, 21, 33, 32]
+            data: [133, 82, 129, 90, 132, 93, 110]
           },
           {
-            name: '食物',
+            name: '衣物',
             type: 'line',
-            stack: 'Total',
-            data: [12, 13, 10, 13, 9, 23, 21]
+            data: [32, 18, 13, 10, 21, 33, 32]
           },
           {
-            name: '装饰',
+            name: '书籍',
             type: 'line',
-            stack: 'Total',
-            data: [ 19, 23, 22, 18, 29, 33, 31]
+            data: [33, 22, 18, 13, 10, 18, 29,]
           },
           {
-            name: '配饰',
+            name: '家具',
             type: 'line',
-            stack: 'Total',
-            data: [15, 23, 20, 15, 19, 33, 41]
+            data: [ 19, 23, 10, 18, 29, 33, 31]
           },
           {
             name: '日用品',
             type: 'line',
-            stack: 'Total',
-            data: [82, 129, 133, 132, 93, 90, 93]
-          }
+            data: [15, 23, 20, 15, 9, 23, 21]
+          },
         ]
     };
       

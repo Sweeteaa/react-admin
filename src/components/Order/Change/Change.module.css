@@ -82,3 +82,19 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+.top{
+    width: 1000px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    color: darkcyan;
+}
+

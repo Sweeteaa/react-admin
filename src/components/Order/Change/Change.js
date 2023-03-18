@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './Change.module.css'
-import { message,Pagination } from 'antd';
+import { message, Pagination, Input } from 'antd';
 import { useSelector } from 'react-redux';
 import { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
+const { Search } = Input;
 
 const Change = () => {
     const [messageApi, contextHolder] = message.useMessage();
@@ -91,11 +92,26 @@ const Change = () => {
         console.log(page);
         setCurrent(page);
     };
+
+    const onSearch = (value) => console.log(value);
     return (
         <div>
             {contextHolder}
             <div className={classes.main}>
-                <div className={classes.data}>数据</div>
+                <div className={classes.top}>
+                    <div className={classes.title}>
+                        换购订单列表
+                    </div>
+                    <div className={classes.search}>
+                        <Search
+                            placeholder="input search text"
+                            onSearch={onSearch}
+                            style={{
+                                width: 200,
+                            }}
+                        />
+                    </div>
+                </div>
                 <div className={classes.table}>
                     <table className={classes.tab}>
                         <thead className={classes.head}>

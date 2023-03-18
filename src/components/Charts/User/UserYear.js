@@ -7,7 +7,7 @@ const UserYear = () => {
           trigger: 'axis'
         },
         legend: {
-          data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+          data: ['用户']
         },
         grid: {
           left: '3%',
@@ -29,41 +29,17 @@ const UserYear = () => {
         },
         series: [
           {
-            name: '全部换购商品种类',
+            name: '用户注册新增',
             type: 'line',
             stack: 'Total',
             data: [12, 13, 10, 13, 9, 23, 21]
-          },
-          {
-            name: '食物',
-            type: 'line',
-            stack: 'Total',
-            data: [32, 33, 22, 18, 21, 33, 32]
-          },
-          {
-            name: '装饰',
-            type: 'line',
-            stack: 'Total',
-            data: [15, 23, 20, 15, 19, 33, 41]
-          },
-          {
-            name: '配饰',
-            type: 'line',
-            stack: 'Total',
-            data: [ 19, 23, 22, 18, 29, 33, 31]
-          },
-          {
-            name: '日用品',
-            type: 'line',
-            stack: 'Total',
-            data: [82, 129, 133, 132, 93, 90, 93]
           }
         ]
     };
       
     return (
         <div>
-            <div>换购数据变化（年）</div>
+            <div>用户注册新增人数</div>
             <EChartsReact option={option} style={{height:'350px',width:'1200px'}}/>
         </div>
     );
