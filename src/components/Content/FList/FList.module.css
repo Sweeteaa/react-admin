@@ -1,0 +1,16 @@
+.list{
+    width: 600px;
+    height: 150px;
+}
+
+.bac{
+    background-color: #fff;
+}
+
+.word{
+    font-size: 20px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
+}

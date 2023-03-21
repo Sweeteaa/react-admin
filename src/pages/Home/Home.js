@@ -35,7 +35,10 @@ const Home = () => {
             getItem('回收订单管理', '/home/recycle', <LaptopOutlined />),
             getItem('换购订单管理', '/home/change', <NotificationOutlined />),
         ]),
-        getItem('活动管理', '/home/resource', <LaptopOutlined />),
+        getItem('活动管理', 'sub2', <MailOutlined />, [
+            getItem('新增活动', '/home/resource', <LaptopOutlined />),
+            getItem('活动管理', '/home/activity', <LaptopOutlined />),
+        ]),
     ];
 
     

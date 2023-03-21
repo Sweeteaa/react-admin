@@ -5,19 +5,15 @@
     flex-wrap: wrap;
     background-color: rgb(248, 241, 232);
     border-radius: 30px;
+    padding-bottom: 50px;
 }
 
 .canlendar{
     margin-top: 50px;
-}
-
-.number{
-    margin-top: 50px;
-    width: 600px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .lis{
@@ -25,15 +21,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-}
-
-.toplist{
-    width: 500px;
-    height: 300px;
-}
-
-.list{
-    width: 1200px;
-    height: 200px;
+    margin-top: -200px;
 }
