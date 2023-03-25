@@ -47,12 +47,47 @@
     color:#161616;
 }
 
+.ubtn{
+    border: none;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background-color:rgb(113, 172, 196);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.change{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.obtn{
+    border: none;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background-color:rosybrown;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.inp{
+    width: 160px;
+    height: 25px;
+    border-radius: 20px;
+    border: none;
+}
+
 .btn{
     border: none;
     width: 60px;
     height: 30px;
     color: #fff;
-    background-color:palevioletred;
+    background-color: darkcyan;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -74,10 +109,38 @@
 
 .cbtn{
     border: none;
-    width: 60px;
+    width: 80px;
     height: 30px;
     color: #fff;
     background-color:palevioletred;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.fbtn{
+    border: none;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background-color: rgb(124, 143, 143);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fcbtn{
+    border: none;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    background-color: rgb(124, 143, 143);
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -88,7 +151,7 @@
     height: 70px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 

@@ -9,6 +9,7 @@ import Uchart from '../Charts/Use/Uchart/Uchart';
 import Userchart from '../Charts/User/Userchart/Userchart';
 import Audit from '../Order/Audit/Audit';
 import Activity from '../Resource/Activity/Activity';
+import ActivityAudit from '../Resource/ActivityAudit/ActivityAudit';
 
 const Contents = () => {
     return (
@@ -27,6 +28,7 @@ const Contents = () => {
                 <Route exact path="recycle" element={<Recycle />} />
                 <Route exact path="change" element={<Change />} />
                 <Route exact path="resource" element={<Resource />} />
+                <Route exact path="activityaudit" element={<ActivityAudit />} />
                 <Route exact path="activity" element={<Activity />} />
             </Routes>
         </div>

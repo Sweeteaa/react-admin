@@ -37,6 +37,7 @@ const Home = () => {
         ]),
         getItem('活动管理', 'sub2', <MailOutlined />, [
             getItem('新增活动', '/home/resource', <LaptopOutlined />),
+            getItem('活动订单审核', '/home/activityaudit', <LaptopOutlined />),
             getItem('活动管理', '/home/activity', <LaptopOutlined />),
         ]),
     ];

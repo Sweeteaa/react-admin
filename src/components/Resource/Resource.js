@@ -71,7 +71,7 @@ function Resource() {
         return new Promise((resolve,reject) => {
             axios({
                   method:'post',
-                  url:`http://127.0.0.1:3001/user/activity/addActivityOrder`,
+                  url:`http://127.0.0.1:3001/user/activity/addActivity`,
                   data:params,
                   headers:{'Content-Type':'application/x-www-form-urlencoded'}
               })

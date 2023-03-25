@@ -8,6 +8,7 @@ import Audit from '../components/Order/Audit/Audit';
 import Change from '../components/Order/Change/Change';
 import Recycle from '../components/Order/Recycle/Recycle';
 import Activity from '../components/Resource/Activity/Activity';
+import ActivityAudit from '../components/Resource/ActivityAudit/ActivityAudit';
 import Resource from '../components/Resource/Resource';
 import Enter from '../pages/Enter/Enter';
 import Home from '../pages/Home/Home';
@@ -26,6 +27,7 @@ const router = () => {
                 <Route path={"recycle"} element={<Recycle/>}/>
                 <Route path={"change"} element={<Change/>}/>
                 <Route path={"resource"} element={<Resource/>}/>
+                <Route path={"activityaudit"} element={<ActivityAudit/>}/>
                 <Route path={"activity"} element={<Activity/>}/>
             </Route>
         </Routes>
