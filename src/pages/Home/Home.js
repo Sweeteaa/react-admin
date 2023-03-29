@@ -53,7 +53,7 @@ const Home = () => {
             <Layout>
                 {/* 顶栏 */}
                 <Header className={classes.header}>
-                    <div className={classes.logo} style={{fontSize:'40px'}}><Link to='/first'><DeleteOutlined />旧物回收利用系统</Link></div>
+                    <div className={classes.logo} style={{fontSize:'40px'}}><Link to='/home/first' style={{color:'cadetblue'}}><DeleteOutlined />旧物回收利用系统</Link></div>
                  
                     <div className={classes.select}>
                         <button className={classes.name}>
@@ -86,7 +86,7 @@ const Home = () => {
                                 borderRight: 0,
                             }}
                             mode="inline"
-                            theme="dark"
+                            theme="light"
                         />
                     </Sider>
                     {/* 内容 */}

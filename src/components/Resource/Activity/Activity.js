@@ -68,6 +68,7 @@ const Activity = () => {
         <div>
             {contextHolder}
             <div className={classes.table}>
+                    <div className={classes.title}>活动管理</div>
                     <table className={classes.tab}>
                         <thead className={classes.head}>
                             <tr>

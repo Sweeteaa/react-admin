@@ -107,6 +107,7 @@ const ActivityAudit = () => {
         <div>
             {contextHolder}
             <div className={classes.table}>
+                    <div className={classes.title}>活动订单审核</div>
                     <table className={classes.tab}>
                         <thead className={classes.head}>
                             <tr>
@@ -133,7 +134,7 @@ const ActivityAudit = () => {
                                                 }>通过</button>
                                             </td>
                                         </tr>
-                                    )
+                                    ).reverse()
                                 }
                             </tbody>
                     </table>

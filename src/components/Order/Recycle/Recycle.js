@@ -62,6 +62,8 @@ const Recycle = (e) => {
     const [list, getList] = useState([])
     //刷新数据
     const [count, setCount] = useState(0);
+    //搜索结果
+    const [input, setInput] = useState(0);
 
     //刷新加载
     const [loading, setLoad] = useState(false)
@@ -92,13 +94,15 @@ const Recycle = (e) => {
     // console.log(list.length)
 
     //换页
-    const [current, setCurrent] = useState(1);
-    const onChange = (page) => {
-        console.log(page);
-        setCurrent(page);
-    };
+    // const [current, setCurrent] = useState(1);
+    // const onChange = (page) => {
+    //     console.log(page);
+    //     setCurrent(page);
+    // };
 
-    const onSearch = (value) => console.log(value);
+    const onSearch = (value) => {
+        setInput(value)
+    }
     return (
         <div>
             {contextHolder}
@@ -109,7 +113,7 @@ const Recycle = (e) => {
                     </div>
                     <div className={classes.search}>
                         <Search
-                            placeholder="input search text"
+                            placeholder="搜索指定状态订单"
                             onSearch={onSearch}
                             style={{
                                 width: 200,
@@ -117,7 +121,7 @@ const Recycle = (e) => {
                         />
                     </div>
                 </div>
-                <div className={classes.table}>
+                <div className={classes.tablee}>
                     <table className={classes.tab}>
                         <thead className={classes.head}>
                             <tr>
@@ -136,14 +140,14 @@ const Recycle = (e) => {
                         </thead>
                             <tbody className={classes.body}>
                                 {
+                                    !input &&
                                     list.map(item=>
-                                        item.page === current&&
                                         <tr key={item.id}>
                                             <td>{item.id}</td>
                                             <td>{item.username}</td>
                                             <td>{item.type}</td>
                                             <td>{item.weight}</td>
-                                            <td>{item.timePeriod}</td>
+                                            <td>{item.timePeriod.replace("T16:00:00.000Z","")}</td>
                                             <td style={{fontWeight:'bold'}}>
                                                 {item.state}
                                             </td>
@@ -179,12 +183,58 @@ const Recycle = (e) => {
                                             }
                                         </tr>
                                         
-                                    )
+                                    ).reverse()
+                                }
+                                {
+                                    input !== null &&
+                                    list.map(item=>
+                                        item.state === input &&
+                                        <tr key={item.id}>
+                                            <td>{item.id}</td>
+                                            <td>{item.username}</td>
+                                            <td>{item.type}</td>
+                                            <td>{item.weight}</td>
+                                            <td>{item.timePeriod.replace("T16:00:00.000Z","")}</td>
+                                            <td style={{fontWeight:'bold'}}>
+                                                {item.state}
+                                            </td>
+                                            <td>
+                                                <button className={classes.btn} onClick={
+                                                    e => {
+                                                        //取消点击默认行为
+                                                        e.preventDefault();
+                                                        //更改状态值
+                                                        setShow(prevState => !prevState)
+                                                    }
+                                                }>{show?'取消':'更新'}</button>
+                                            </td>
+                                            {
+                                                show &&
+                                                <td className={classes.hide}>
+                                                    <select className={classes.slt} onChange={e=>{
+                                                        setSelect(e.target.value)
+                                                        setId(item.id)}}
+                                                    >
+                                                        <option value="未回收">未回收</option>
+                                                        <option value="回收中">回收中</option>
+                                                        <option value="待评价">待评价</option>
+                                                        <option value="已完成">已完成</option>
+                                                    </select>
+                                                        <button className={classes.cbtn} onClick={e=>{
+                                                            e.preventDefault();
+                                                            updateValue();
+                                                        }}>
+                                                            修改
+                                                    </button>
+                                                </td>
+                                            }
+                                        </tr>
+                                        
+                                    ).reverse()
                                 }
                             </tbody>
                     </table>
                 </div>
-                <Pagination current={current} onChange={onChange} total={list.length} />
             </div>
         </div>
     );

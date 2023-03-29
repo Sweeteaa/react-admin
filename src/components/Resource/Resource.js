@@ -136,7 +136,7 @@ function Resource() {
                         editor={editor}
                         defaultConfig={toolbarConfig}
                         mode="default"
-                        style={{ borderBottom: '1px solid #ccc', width:'1400px' }}
+                        style={{ borderBottom: '1px solid #ccc', width:'1500px' }}
                     />
                     <Editor
                         defaultConfig={editorConfig}
@@ -144,7 +144,7 @@ function Resource() {
                         onCreated={setEditor}
                         onChange={editor => setHtml(editor.getHtml())}
                         mode="default"
-                        style={{ height: '450px', overflowY: 'hidden', width:'1400px' }}
+                        style={{ height: '450px', overflowY: 'hidden', width:'1500px' }}
                     />
                 </div>
                 <button onClick={onSubmit} className={classes.btn}>发布</button>

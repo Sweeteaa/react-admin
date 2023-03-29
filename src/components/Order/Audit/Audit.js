@@ -260,7 +260,7 @@ const Audit = () => {
                                 <th>订单号</th>
                                 <th>用户</th>
                                 <th>类型</th>
-                                <th>重量/数量(kg/件)</th>
+                                <th>重量/数量<br/>(kg/件)</th>
                                 <th>可获得积分</th>
                                 <th>回收时间</th>
                                 <th>审核状态</th>
@@ -291,14 +291,20 @@ const Audit = () => {
                                                         onClick={
                                                             udWeight.bind(this,{id:item.id,type:item.type})
                                                         } 
-                                                        className={classes.obtn} 
+                                                        className={classes.btn} 
                                                     >确认</button>
+                                                    <button
+                                                        onClick={
+                                                            ()=>setShow(false)
+                                                        } 
+                                                        className={classes.cbtn} 
+                                                    >取消</button>
                                                 </td>
                                             }
                                             <td>
                                                 {item.Integral}
                                             </td>
-                                            <td>{item.timePeriod}</td>
+                                            <td>{item.timePeriod.replace("T16:00:00.000Z","")}</td>
                                             <td style={{fontWeight:'bold'}}>
                                                 {
                                                     item.audit === 'false' && <div>未审核</div>
@@ -326,7 +332,7 @@ const Audit = () => {
                                                 </button>
                                             </td>
                                         </tr>
-                                    )
+                                    ).reverse()
                                 }
                             </tbody>
                     </table>

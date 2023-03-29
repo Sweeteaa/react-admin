@@ -1,7 +1,10 @@
 import React from 'react';
 import EChartsReact from 'echarts-for-react';
+import useGetWeek from '../../../hooks/useGetWeek'
 
 const Year = () => {
+    let week = useGetWeek() 
+    // console.log(week)
     let option = {
         tooltip: {
           trigger: 'axis'
@@ -22,7 +25,7 @@ const Year = () => {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
+          data: week
         },
         yAxis: {
           type: 'value'

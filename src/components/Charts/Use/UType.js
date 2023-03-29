@@ -5,11 +5,11 @@ import axios from 'axios';
 
 const UType = () => {
     const [UCD, getUCD] = useState([])
-    // const [UBD, getUBD] = useState([])
+    const [UBD, getUBD] = useState([])
     const [UFD, getUFD] = useState([])
     const [UDD, getUDD] = useState([])
 
-    //获取衣服种类订单数
+    //获取配饰种类订单数
     const UClothData = useCallback(async () => {
         await axios({
             method:'get',
@@ -20,18 +20,18 @@ const UType = () => {
         });
     },[])
 
-    //获取书籍种类订单数
-    // const UBookData = useCallback(async () => {
-    //   await axios({
-    //       method:'get',
-    //       url:`http://127.0.0.1:3001/chart/recyclecate/${'配饰'}`,
-    //   }).then((res) => {
-    //       // console.log('res', res.data.data);
-    //       getUBD(res.data.data[0])
-    //     });
-    // },[])
+    //获取装饰种类订单数
+    const UBookData = useCallback(async () => {
+      await axios({
+          method:'get',
+          url:`http://127.0.0.1:3001/chart/usecate/${'装饰'}`,
+      }).then((res) => {
+          // console.log('res', res.data.data);
+          getUBD(res.data.data[0])
+        });
+    },[])
 
-    //获取家具种类订单数
+    //获取食物种类订单数
     const UFoodData = useCallback(async () => {
       await axios({
           method:'get',
@@ -55,7 +55,7 @@ const UType = () => {
 
     useEffect(() => {
       UClothData()
-      // UBookData()
+      UBookData()
       UFoodData()
       UDayData()
     }, [UClothData,UFoodData,UDayData]);
@@ -86,6 +86,7 @@ const UType = () => {
             },
             data: [
               { value: UCD["count(1)"], name: '配饰' },
+              { value: UBD["count(1)"], name: '装饰' },
               { value: UFD["count(1)"], name: '食物' },
               { value: UDD["count(1)"], name: '日用品' },
             ]

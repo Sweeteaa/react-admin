@@ -1,8 +1,8 @@
 .number{
     margin-top: 50px;
-    width: 600px;
-    height: 200px;
+    width: 500px;
+    height: 100px;
     background-color: #fff;
     border-radius: 20px;
-    padding-left: 100px;
+    padding: 60px;
 }

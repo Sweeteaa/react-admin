@@ -14,8 +14,15 @@
 
 .tab{
     /* border:1px solid #aaa; */
-    width:1300px;
+    width:1500px;
     
+}
+
+table thead tr, table tbody tr{
+    box-sizing: border-box;
+    table-layout: fixed;
+    display: table;
+    width: 100%;
 }
 
 .head th{
@@ -33,9 +40,8 @@
 
 
 .body tr{
-    height: 28px;
-    font-size: 18px;
-    border:2px solid #aaa;
+    height: 32px;
+    font-size: 20px;
 }
 
 .body td{
@@ -76,7 +82,7 @@
 }
 
 .inp{
-    width: 160px;
+    width: 50px;
     height: 25px;
     border-radius: 20px;
     border: none;
@@ -84,7 +90,7 @@
 
 .btn{
     border: none;
-    width: 60px;
+    width: 70px;
     height: 30px;
     color: #fff;
     background-color: darkcyan;
@@ -109,7 +115,7 @@
 
 .cbtn{
     border: none;
-    width: 80px;
+    width: 70px;
     height: 30px;
     color: #fff;
     background-color:palevioletred;

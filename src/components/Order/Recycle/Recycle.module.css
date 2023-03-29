@@ -5,21 +5,42 @@
     align-items: center;
 }
 
-.table{
+.tablee{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 1300px;
 }
 
 .tab{
     /* border:1px solid #aaa; */
-    width:1300px;
-    
+    width:1500px;
+}
+
+table thead {
+    /* color: white;
+    background-color: #38F; */
+    display: inline-block;
+}
+
+table tbody {
+    display: inline-block;
+    width: calc(100% + 5px); /*这里的8px是滚动条的宽度*/
+    height: 700px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table thead tr, table tbody tr, table tfoot tr {
+    box-sizing: border-box;
+    table-layout: fixed;
+    display: table;
+    width: 100%;
 }
 
 .head th{
-    height: 36px;
+    height: 40px;
     vertical-align:baseline;
     padding:5px 15px 5px 6px;
     background-color:cadetblue;
@@ -31,11 +52,9 @@
     border-top-left-radius: 10px; */
 }
 
-
 .body tr{
-    height: 28px;
-    font-size: 18px;
-    border:2px solid #aaa;
+    height: 35px;
+    font-size: 22px;
 }
 
 .body td{
@@ -96,4 +115,5 @@
     font-size: 40px;
     font-weight: bold;
     color: darkcyan;
+    margin-left: -100px;
 }
