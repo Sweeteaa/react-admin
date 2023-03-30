@@ -49,8 +49,8 @@ function Resource() {
     }
 
     const needChange = (e)=>{
+        setNeed(Number(e.target.value))
         // console.log(e.target.value)
-        setNeed(e.target.value)
     }
 
     const urlChange = (e)=>{
@@ -104,11 +104,6 @@ function Resource() {
         return () => {
             if (editor == null) return
             editor.destroy()
-            setEditor(null)
-            setFileList(null)
-            setNeed(null)
-            setText(null)
-            setTitle(null)
         }
     }, [editor])
 

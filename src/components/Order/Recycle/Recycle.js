@@ -235,6 +235,10 @@ const Recycle = (e) => {
                             </tbody>
                     </table>
                 </div>
+                {
+                    !input &&
+                    <div>共{list.length}条结果</div>
+                }
             </div>
         </div>
     );

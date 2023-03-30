@@ -1,16 +1,23 @@
 import React from 'react';
 import EChartsReact from 'echarts-for-react';
 import useGetWeek from '../../../hooks/useGetWeek'
+import useGetWeekData from '../../../hooks/useGetWeekData';
 
 const Year = () => {
     let week = useGetWeek() 
     // console.log(week)
+    let cloth = useGetWeekData('衣服')
+    let book = useGetWeekData('书籍')
+    let fur = useGetWeekData('家具')
+    let item = useGetWeekData('日用品')
+    console.log(cloth,book,fur,item)
+    // console.log(book[2]["count(1)"])
     let option = {
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          data: [ '全部回收种类','衣物', '书籍', '家具','日用品']
+          data: [ '衣物', '书籍', '家具','日用品']
         },
         grid: {
           left: '3%',
@@ -31,31 +38,58 @@ const Year = () => {
           type: 'value'
         },
         series: [
-          {
-            name: '全部回收种类',
-            type: 'line',
-            data: [133, 82, 129, 90, 132, 93, 110]
-          },
-          {
-            name: '衣物',
-            type: 'line',
-            data: [32, 18, 13, 10, 21, 33, 32]
-          },
-          {
-            name: '书籍',
-            type: 'line',
-            data: [33, 22, 18, 13, 10, 18, 29,]
-          },
-          {
-            name: '家具',
-            type: 'line',
-            data: [ 19, 23, 10, 18, 29, 33, 31]
-          },
-          {
-            name: '日用品',
-            type: 'line',
-            data: [15, 23, 20, 15, 9, 23, 21]
-          },
+          // {
+          //   name: '衣物',
+          //   type: 'line',
+          //   data: [
+          //       cloth[0]["count(1)"], 
+          //       cloth[1]["count(1)"], 
+          //       cloth[2]["count(1)"], 
+          //       cloth[3]["count(1)"], 
+          //       cloth[4]["count(1)"], 
+          //       cloth[5]["count(1)"], 
+          //       cloth[6]["count(1)"]
+          //   ]
+          // },
+          // {
+          //   name: '书籍',
+          //   type: 'line',
+          //   data: [
+          //       book[0]["count(1)"], 
+          //       book[1]["count(1)"], 
+          //       book[2]["count(1)"], 
+          //       book[3]["count(1)"], 
+          //       book[4]["count(1)"], 
+          //       book[5]["count(1)"], 
+          //       book[6]["count(1)"]
+          //   ]
+          // },
+          // {
+          //   name: '家具',
+          //   type: 'line',
+          //   data: [
+          //     item[0]["count(1)"], 
+          //     item[1]["count(1)"], 
+          //     item[2]["count(1)"], 
+          //     item[3]["count(1)"], 
+          //     item[4]["count(1)"], 
+          //     item[5]["count(1)"], 
+          //     item[6]["count(1)"]
+          //   ]
+          // },
+          // {
+          //   name: '日用品',
+          //   type: 'line',
+          //   data: [
+          //       fur[0]["count(1)"], 
+          //       fur[1]["count(1)"], 
+          //       fur[2]["count(1)"], 
+          //       fur[3]["count(1)"], 
+          //       fur[4]["count(1)"], 
+          //       fur[5]["count(1)"], 
+          //       fur[6]["count(1)"]
+          //   ]
+          // },
         ]
     };
       

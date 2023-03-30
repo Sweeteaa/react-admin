@@ -228,7 +228,10 @@ const Change = () => {
                         </tbody>
                     </table>
                 </div>
-                <div>共{list.length}条结果</div>
+                {
+                    !input &&
+                    <div>共{list.length}条结果</div>
+                }
             </div>
         </div>
     )

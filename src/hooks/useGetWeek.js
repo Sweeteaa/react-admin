@@ -1,7 +1,7 @@
 const useGetWeek = ()=>{
     let now = new Date() 
     let arr = []
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < 7; i++){
         let oneweekdate = new Date(now-24*3600*i*1000);
         let y = oneweekdate.getFullYear();
         let m = oneweekdate.getMonth()+1;
