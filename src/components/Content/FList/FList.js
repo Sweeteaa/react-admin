@@ -50,8 +50,8 @@ const FList = () => {
                                     actions={[<Link to='/home/audit' className={classes.word}>审核</Link>]}
                                 >
                                     <List.Item.Meta 
-                                        avatar={<InfoCircleOutlined />}
-                                        title={<div>待审核</div>}
+                                        avatar={<InfoCircleOutlined style={{lineHeight:'80px',fontSize:'20px',color:'red'}}/>}
+                                        title={<div style={{fontSize:'22px'}}>待审核</div>}
                                         description={`${item.username+'--'+item.type}`}
                                     />
                                 </List.Item>

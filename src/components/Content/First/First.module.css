@@ -10,25 +10,35 @@
 }
 
 .canlendar{
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 450px; */
+    height: 400px;
+    display: inline-block;
+}
+
+.audit{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 50px;
+    justify-content: space-around;
 }
 
 .iner{
-    height: 450px;
+    /* height: 450px; */
 }
 
-.lis{
+/* .lis{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -300px;
-}
+} */
 
 .lfont{
     font-size: 28px;
@@ -36,11 +46,11 @@
     color: cadetblue;
 }
 
-.alis{
+/* .alis{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -400px;
     margin-left: 900px;
-}
+} */

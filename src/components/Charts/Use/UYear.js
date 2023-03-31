@@ -1,64 +1,102 @@
 import React from 'react';
 import EChartsReact from 'echarts-for-react';
+import useGetWeekUse from '../../../hooks/useGetWeekUse';
+import useGetWeek from '../../../hooks/useGetWeek';
 
 const UYear = () => {
-  let option = {
-    tooltip: {
-      trigger: 'axis'
-    },
-    legend: {
-      data: ['全部换购商品种类', '食物', '装饰', '配饰','日用品']
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      containLabel: true
-    },
-    toolbox: {
-      feature: {
-        saveAsImage: {}
-      }
-    },
-    xAxis: {
-      type: 'category',
-      boundaryGap: false,
-      data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
-    },
-    yAxis: {
-      type: 'value'
-    },
-    series: [
-      {
-        name: '全部换购商品种类',
-        type: 'line',
-        data: [82, 129, 133, 132, 93, 90, 93]
-      },
-      {
-        name: '食物',
-        type: 'line',
-        data: [32, 33, 22, 18, 21, 33, 32]
-      },
-      {
-        name: '装饰',
-        type: 'line',
-        data: [15, 23, 20, 15, 19, 33, 41]
-      },
-      {
-        name: '配饰',
-        type: 'line',
-        data: [ 19, 23, 22, 18, 29, 33, 31]
-      },
-      {
-        name: '日用品',
-        type: 'line',
-        data: [12, 13, 10, 13, 9, 23, 21]
-      }
-    ]
-};
+    let week = useGetWeek()
+    let food = useGetWeekUse('食物')
+    let dec = useGetWeekUse('装饰')
+    let bea = useGetWeekUse('配饰')
+    let item = useGetWeekUse('日用品')
+    // console.log(cloth,book,fur,item)
+    // console.log(book[2]["count(1)"])
+    let option = {
+        title: {
+          text: '近七日新增换购订单'
+        },
+        tooltip: {
+          trigger: 'axis'
+        },
+        legend: {
+          data: [ '食物', '装饰', '配饰','日用品']
+        },
+        grid: {
+          left: '3%',
+          right: '4%',
+          containLabel: true
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: week
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            name: '食物',
+            type: 'line',
+            data: [
+                food[0]["count(1)"], 
+                food[1]["count(1)"], 
+                food[2]["count(1)"], 
+                food[3]["count(1)"], 
+                food[4]["count(1)"], 
+                food[5]["count(1)"], 
+                food[6]["count(1)"]
+            ]
+          },
+          {
+            name: '装饰',
+            type: 'line',
+            data: [
+              dec[0]["count(1)"], 
+              dec[1]["count(1)"], 
+              dec[2]["count(1)"], 
+              dec[3]["count(1)"], 
+              dec[4]["count(1)"], 
+              dec[5]["count(1)"], 
+              dec[6]["count(1)"]
+          ]
+          },
+          {
+            name: '配饰',
+            type: 'line',
+            data: [
+              bea[0]["count(1)"], 
+              bea[1]["count(1)"], 
+              bea[2]["count(1)"], 
+              bea[3]["count(1)"], 
+              bea[4]["count(1)"], 
+              bea[5]["count(1)"], 
+              bea[6]["count(1)"]
+            ]
+          },
+          {
+            name: '日用品',
+            type: 'line',
+            data: [
+                item[0]["count(1)"], 
+                item[1]["count(1)"], 
+                item[2]["count(1)"], 
+                item[3]["count(1)"], 
+                item[4]["count(1)"], 
+                item[5]["count(1)"], 
+                item[6]["count(1)"]
+            ]
+          },
+        ]
+    };
       
     return (
         <div>
-            <div>回收数据变化（年）</div>
             <EChartsReact option={option} style={{height:'350px',width:'1000px'}}/>
         </div>
     );

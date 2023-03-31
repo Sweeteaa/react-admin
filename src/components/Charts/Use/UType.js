@@ -63,8 +63,17 @@ const UType = () => {
     // console.log(UCD["count(1)"],UFD["count(1)"],UDD["count(1)"])
   
     let option = {
+        title: {
+          text: '换购物品种类回收占比',
+          // subtext: 'Fake Data',
+          left: 'center'
+        },
+        tooltip: {
+          trigger: 'item'
+        },
         legend: {
-          top: 'bottom'
+          orient: 'vertical',
+          left: 'top'
         },
         toolbox: {
           show: true,
@@ -78,7 +87,7 @@ const UType = () => {
         series: [
           {
             type: 'pie',
-            radius: [22, 160],
+            radius: [30, 150],
             center: ['50%', '50%'],
             roseType: 'area',
             itemStyle: {
@@ -95,7 +104,6 @@ const UType = () => {
       };
     return (
         <div>
-            <div>回收物品种类回收占比</div>
             <EChartsReact option={option} style={{height:'450px',width:'500px'}}/>
         </div>
     );

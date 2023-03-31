@@ -1,8 +1,15 @@
 import React from 'react';
 import EChartsReact from 'echarts-for-react';
+import useGetWeek from '../../../hooks/useGetWeek';
 
 const UserYear = () => {
+    let week = useGetWeek()
     let option = {
+        title: {
+          text: '近七日用户注册数',
+          // subtext: 'Fake Data',
+          left: 'left'
+        },
         tooltip: {
           trigger: 'axis'
         },
@@ -22,7 +29,7 @@ const UserYear = () => {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: ['3/10', '3/11', '3/12', '3/13', '3/14', '3/15', '3/16']
+          data: week
         },
         yAxis: {
           type: 'value'
@@ -39,7 +46,6 @@ const UserYear = () => {
       
     return (
         <div>
-            <div>用户注册新增人数</div>
             <EChartsReact option={option} style={{height:'350px',width:'1200px'}}/>
         </div>
     );

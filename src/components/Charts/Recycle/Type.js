@@ -61,24 +61,24 @@ const Type = () => {
   }, [RClothData,RBookData,RFurData,RDayData]);
 
   // console.log(RCD["count(1)"])
-
     let option = {
-        legend: {
-          top: 'bottom'
+        title: {
+          text: '回收物品种类回收占比',
+          // subtext: 'Fake Data',
+          left: 'center'
         },
-        toolbox: {
-          show: true,
-          feature: {
-            mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            restore: { show: true },
-            saveAsImage: { show: true }
-          }
+        tooltip: {
+          trigger: 'item'
+        },
+        legend: {
+          orient: 'vertical',
+          left: 'left'
         },
         series: [
           {
+            name: 'Access From',
             type: 'pie',
-            radius: [22, 160],
+            radius: [30, 150],
             center: ['50%', '50%'],
             roseType: 'area',
             itemStyle: {
@@ -89,13 +89,19 @@ const Type = () => {
               { value: RBD["count(1)"], name: '书籍' },
               { value: RFD["count(1)"], name: '家具' },
               { value: RDD["count(1)"], name: '日用品' },
-            ]
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
           }
         ]
       };
     return (
         <div>
-            <div>回收物品种类回收占比</div>
             <EChartsReact option={option} style={{height:'450px',width:'500px'}}/>
         </div>
     );

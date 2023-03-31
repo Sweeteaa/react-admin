@@ -10,7 +10,7 @@ const Userchart = () => {
             <div className={classes.charts}>
                 <div className={classes.row}>
                     <UserType/>
-                    <UserSignIn/>
+                    {/* <UserSignIn/> */}
                 </div>
                 <UserYear/>
             </div>

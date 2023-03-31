@@ -4,7 +4,7 @@ import useGetWeek from "./useGetWeek";
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 
-const useGetWeekData = (type)=>{
+const useGetWeekUse = (type)=>{
     // let week = useGetWeek()
     // console.log(week)
     let now = new Date() 
@@ -28,7 +28,7 @@ const useGetWeekData = (type)=>{
     const one = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[0]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[0]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setYi(res.data.data[0])
@@ -38,7 +38,7 @@ const useGetWeekData = (type)=>{
     const two = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[1]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[1]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setEr(res.data.data[0])
@@ -48,7 +48,7 @@ const useGetWeekData = (type)=>{
     const three = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[2]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[2]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setSan(res.data.data[0])
@@ -58,7 +58,7 @@ const useGetWeekData = (type)=>{
     const four = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[3]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[3]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setSi(res.data.data[0])
@@ -68,7 +68,7 @@ const useGetWeekData = (type)=>{
     const five = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[4]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[4]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setWu(res.data.data[0])
@@ -78,7 +78,7 @@ const useGetWeekData = (type)=>{
     const six = useCallback(async () => {
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[5]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[5]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setLiu(res.data.data[0])
@@ -89,7 +89,7 @@ const useGetWeekData = (type)=>{
         // console.log(day)
         await axios({
             method:'get',
-            url:`http://127.0.0.1:3001/chart/recycleday/${week[6]}/${type}`,
+            url:`http://127.0.0.1:3001/chart/useday/${week[6]}/${type}`,
         }).then((res) => {
             // console.log('res', res);
             setQi(res.data.data[0])
@@ -117,4 +117,4 @@ const useGetWeekData = (type)=>{
     return num
 }
 
-export default useGetWeekData;
+export default useGetWeekUse;

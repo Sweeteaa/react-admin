@@ -3,6 +3,11 @@ import EChartsReact from 'echarts-for-react';
 
 const UserType = () => {
     let option = {
+      title: {
+        text: '用户性别统计',
+        // subtext: 'Fake Data',
+        left: 'center'
+      },
         legend: {
           top: 'bottom'
         },
@@ -33,7 +38,6 @@ const UserType = () => {
       };
     return (
         <div>
-            <div>用户性别分布</div>
             <EChartsReact option={option} style={{height:'450px',width:'500px'}}/>
         </div>
     );
