@@ -65,7 +65,8 @@ function Resource() {
             text:text,
             img:fileList,
             main:html,
-            num:need
+            num:need,
+            state:'进行中'
         }
         // console.log(params)
         return new Promise((resolve,reject) => {

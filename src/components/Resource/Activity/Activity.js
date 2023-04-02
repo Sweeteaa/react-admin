@@ -9,13 +9,13 @@ const Activity = () => {
     const success = () => {
             messageApi.open({
             type: 'success',
-            content: '活动删除成功！',
+            content: '活动状态更新成功！',
         });
     };
     const warning = () => {
         messageApi.open({
           type: 'warning',
-          content: '活动删除失败！',
+          content: '活动状态更新失败！',
         });
     };
     const [list, getList] = useState()
@@ -31,10 +31,14 @@ const Activity = () => {
     },[])
 
     const del = (value)=>{
+        let State = {
+            state:'已完成'
+        }
         return new Promise((resolve,reject) => {
             axios({
                   method:'post',
                   url:`http://127.0.0.1:3001/user/activity/delActivity/${value.id}`,
+                  data:State,
                   headers:{'Content-Type':'application/x-www-form-urlencoded'}
               })
             .then((res) => {
@@ -77,6 +81,7 @@ const Activity = () => {
                                 <th>活动简介</th>
                                 <th>活动需求</th>
                                 <th>活动进度</th>
+                                <th>状态</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -90,10 +95,11 @@ const Activity = () => {
                                             <td>{item.text}</td>
                                             <td>{item.num}</td>
                                             <td>{item.progress}</td>
+                                            <td>{item.state}</td>
                                             <td>
                                                 <button className={classes.btn} onClick={
                                                     del.bind(this,{id:item.id})
-                                                }>删除</button>
+                                                }>更新</button>
                                             </td>
                                         </tr>
                                     )
